@@ -1,6 +1,8 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django import forms
 from django.contrib.auth import get_user_model
+from django.forms import ModelForm
+
 
 class LoginFormUser(AuthenticationForm): # форма авторизации
     username = forms.CharField(label='Логин', widget=forms.TextInput())
@@ -9,3 +11,7 @@ class LoginFormUser(AuthenticationForm): # форма авторизации
     class Meta:
         model = get_user_model()
         fields = ['username', 'password']
+
+
+class ProfileUser(ModelForm):
+    username = forms.CharField
