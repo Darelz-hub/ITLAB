@@ -86,6 +86,7 @@ DATABASES = {
 'NAME': BASE_DIR / 'db.sqlite3',
 }
 }
+# ещё одна проверка
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
