@@ -90,6 +90,7 @@ DATABASES = {
 }
 }
 # ещё одна проверка 12
+# предпоследняя проверка
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
