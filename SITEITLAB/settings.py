@@ -80,6 +80,7 @@ WSGI_APPLICATION = 'SITEITLAB.wsgi.application'
 #Проверка
 #Вторая проверка2
 # Попытка номер 2
+# Попытка номер 3
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 DATABASES = {
