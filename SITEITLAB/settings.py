@@ -78,7 +78,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'SITEITLAB.wsgi.application'
 #Проверка
-#Вторая проверка
+#Вторая проверка2
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 DATABASES = {
