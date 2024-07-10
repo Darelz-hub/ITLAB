@@ -1,43 +1,42 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Montserrat';
+list-style:none;
+text-decoration:none;
+}
 body {
 height: auto;
-font-family: 'Montserrat';
-font-size: 4em;
 color: white;
 }
-
-.navbar{
-width: 100%;
-height: 40%;
+header{
 background-color: #372579;
-
-}
-.navbar .container {
-height: inherit;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
 display: flex;
-justify-content: start;
+justify-content: space-between;
 align-items: center;
+padding: 0 5%;
 }
-.navbar .container .navbar-logo{
-width: 40%;
-height: 40%;
+header a svg{
+padding-right: 10%;
+width: 200%;
+height: 200%;
 }
-.navbar-menu{
-list-style-type: none;
-padding-left: 0;
-margin-bottom: 0;
-
+header nav ul li{
+position: relative;
+float: left;
 }
-.navbar-menu li{
-display: inline-block;
-}
-.navbar-menu li a{
+header nav ul li a{
 color: white;
-display: inline-block;
-}
-nav div div ul li a{
 display: block;
+padding: 15px;
+font-size: 3em;
 }
-nav div div ul li ul{
+nav ul li ul{
 position: absolute;
 left: 0;
 wight: 100%;
@@ -45,9 +44,11 @@ background-color: #372579;
 color: white;
 display: none;
 }
-nav div div ul li ul li{
+nav ul li ul li{
 wight: 100%;
+color: white;
+border: 1px solid #FEF134;
 }
-nav div div ul li:hover > ul {
+nav ul li:hover > ul {
     display: initial;
 }
