@@ -77,10 +77,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'SITEITLAB.wsgi.application'
-#Проверка
-#Вторая проверка2
-# Попытка номер 2
-# Попытка номер 3
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 DATABASES = {
@@ -89,10 +85,7 @@ DATABASES = {
 'NAME': BASE_DIR / 'db.sqlite3',
 }
 }
-# ещё одна проверка 12
-# предпоследняя проверка 12
-# последняя проверка
-# финал
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -138,7 +131,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
