@@ -71,5 +71,47 @@ border: 0;
 background-color: #372579;
 color: #FFFFFF;
 font-size: 3em;
+}
+main{
+margin-top: 35%;
+color: black;
+}
+footer{
+background-color: #372579;
+padding-top: 5%;
+padding-bottom: 5%;
+}
+.info_block_left{
+left:0;
+top:0;
+width:50%;
+height:100%;
+overflow:auto;
+float:left;
+}
+.info_block_right{
+right:0;
+top:0;
+width:50%;
+height:100%;
+overflow:auto;
+}
+{
+border-bottom: 2px solid maroon;
+}
 
+footer div.info_block_right h1{
+font-size: 3em;
+}
+footer div.info_block_right ul li{
+font-size: 2em;
+align-items: center;
+}
+footer div.info_block_right ul li svg{
+align-items: center;
+float: left;
+}
+footer div.info_block_right ul li svg.footer_svg{
+width: 35px;
+height: 35px;
 }

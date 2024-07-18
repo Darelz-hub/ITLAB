@@ -2,13 +2,6 @@
 {% load static %}
 {% block content %}
 <main>
-<p>IT LAB</p>
-<a href="{% url 'users:login' %}"> Login</a>
-
-<form method="post" action="{% url 'users:logout' %}">
-    {% csrf_token %}
-    <button type="submit">Выйти</button>
-</form>
-{{user.username}}
+<p>Новости</p>
 </main>
 {% endblock %}
