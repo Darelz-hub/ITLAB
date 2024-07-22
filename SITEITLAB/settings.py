@@ -167,3 +167,8 @@ EMAIL_USE_SSL=True
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL = EMAIL_HOST_USER
 EMAIL_ADMIN = EMAIL_HOST_USER
+
+# Настройка папки media для хранение видео, изображения, документов
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
