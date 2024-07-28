@@ -12,7 +12,6 @@ color: white;
 }
 header{
 background-color: #372579;
-position: fixed;
 top: 0;
 left: 0;
 right: 0;
@@ -73,7 +72,6 @@ color: #FFFFFF;
 font-size: 3em;
 }
 main{
-margin-top: 35%;
 color: black;
 }
 footer{
@@ -99,6 +97,7 @@ overflow:auto;
 
 footer div.info_block_right h1{
 font-size: 2.5em;
+padding-left: 10px;
 }
 footer div.info_block_right ul li{
 font-size: 2em;
@@ -112,4 +111,30 @@ float: left;
 footer div.info_block_right ul li svg.footer_svg{
 width: 35px;
 height: 35px;
+}
+footer div.info_block_left h1{
+font-size: 2.5em;
+padding-left: 10px;
+}
+footer div.info_block_left ul li{
+font-size: 2em;
+align-items: center;
+padding-left: 10px;
+}
+footer div.info_block_left ul li svg{
+align-items: center;
+float: left;
+}
+footer div.info_block_left ul li svg.footer_svg{
+width: 35px;
+height: 35px;
+}
+.video{
+width: 1550px;
+height: 872px;
+}
+.information{
+display: center;
+text-align: center;
+font-size: 2.5em;
 }
