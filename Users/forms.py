@@ -13,5 +13,8 @@ class LoginFormUser(AuthenticationForm): # форма авторизации
         fields = ['username', 'password']
 
 
-class ProfileUser(ModelForm):
-    username = forms.CharField
+# class Application(ModelForm):
+#
+
+# class ProfileUser(ModelForm):
+#     username = forms.CharField
