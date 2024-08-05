@@ -6,6 +6,9 @@ class Secions(models.Model):
     name = models.CharField(max_length=50, verbose_name='Наименование')
     name_ru = models.CharField(max_length=50, verbose_name='Наименование на русском')
 
+    def __str__(self):
+        return self.name_ru
+
 class ApplicationUsers(models.Model):
     group = models.CharField(max_length=20, verbose_name='Группа')
     full_name = models.CharField(max_length=100, verbose_name='ФИО')

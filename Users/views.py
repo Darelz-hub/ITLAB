@@ -11,6 +11,8 @@ from Users.forms import ApplicationForm
 
 class Application(View):
     def get(self, request):
-        form_class = ApplicationForm
-        template = 'users/application.html'
-        render(request, template_name=template)
+        form = ApplicationForm
+        data = {'form': form}
+        return render(request, 'users/application.html', data)
+    def post(self, request):
+        return render(request, 'news/main.html')
