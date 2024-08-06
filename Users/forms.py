@@ -16,8 +16,19 @@ class LoginFormUser(AuthenticationForm): # форма авторизации
 
 
 class ApplicationForm(ModelForm):
+    def __init__(self, *args, **kwargs): # убираем у всех полей input label
+        super(ModelForm, self).__init__(*args, **kwargs)
+        for field in self.fields.values():
+            field.label = ''
     class Meta:
         model = ApplicationUsers
         fields = ['group', 'full_name', 'sections', 'telegram', 'descriptions']
+        widgets = {
+                'group': forms.TextInput(attrs={'placeholder': 'Группа'}),
+                'full_name': forms.TextInput(attrs={'placeholder': 'ФИО'}),
+                'telegram': forms.TextInput(attrs={'placeholder': 'Телеграм'}),
+                'descriptions': forms.TextInput(attrs={'placeholder': 'Информация о вас'})
+        }
+
 # class ProfileUser(ModelForm):
 #     username = forms.CharField
