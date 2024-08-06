@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'CSS/application.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 <body>
-Hello
-    <form method="POST">
-                {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Отправить">
-    </form>
+    <div class="border_application">
+        <h1>Заявка в IT LAB</h1>
+        <form method="POST">
+                    {% csrf_token %}
+            <div class="form_application">
+            {{form.as_p}}
+                <button type="submit">Отправить</button>
+            </div>
+
+        </form>
+    </div>
 </body>
 </html>

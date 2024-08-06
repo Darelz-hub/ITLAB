@@ -1,0 +1,44 @@
+*{
+font-family: 'Montserrat';
+}
+.border_application{
+border: 1px solid #372579;
+background-color: #372579;
+color: #FFFFFF;
+height: 550px;
+width: 450px;
+margin-right: auto;
+margin-left: auto;
+margin-top: 5%;
+border-radius: 100px;
+}
+.form_application{
+    text-align: center;
+}
+h1{
+text-align: center;
+}
+input{
+    width: 300px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    text-align:center;
+}
+select {
+    width: 303px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    text-align:center;
+}
+textarea{
+    width: 300px;
+    border-radius: 20px;
+    text-align:left;
+    font-size: 1em;
+}
+button{
+    width: 200px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    text-align: center;
+}

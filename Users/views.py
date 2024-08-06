@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import View
+from django.views.generic import FormView
 
 from Users.forms import ApplicationForm
 
@@ -9,10 +10,10 @@ from Users.forms import ApplicationForm
 
 #class ProfileUser(View):
 
-class Application(View):
-    def get(self, request):
-        form = ApplicationForm
-        data = {'form': form}
-        return render(request, 'users/application.html', data)
-    def post(self, request):
-        return render(request, 'news/main.html')
+class Application(FormView): # форма заявки
+    template_name = 'users/application.html'
+    form_class = ApplicationForm
+    success_url = '/'
+    def form_valid(self, form): # метод для сохранения данных в бд
+        form.save()
+        return super().form_valid(form)
