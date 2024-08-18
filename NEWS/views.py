@@ -7,7 +7,7 @@ from NEWS.models import Video
 class MainPage(View):
     def get(self, request):
         #return render(request, 'news/main.html')
-        video = get_object_or_404(Video, title='ITLAB')
-        data = {'video': video}
-        print(video.title)
-        return render(request, 'news/main.html', data)
+        # video = get_object_or_404(Video, title='ITLAB')
+        # data = {'video': video}
+        # print(video.title)
+        return render(request, 'news/main.html')

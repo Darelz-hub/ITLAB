@@ -28,5 +28,6 @@ urlpatterns = [
         template_name='users/password_reset_complete.html'
     ), name='password_reset_complete'),
     path('application/', users.Application.as_view(), name='application'),
-    #path('profile/', views.ProfileUser.as_view(), name='profile')
+    path('profile/', views.ProfileUser.as_view(), name='profile'),
+    path('profile_change/', views.ProfileChange.as_view(), name='profile_change'),
 ]
