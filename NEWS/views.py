@@ -5,9 +5,9 @@ from NEWS.models import Video
 
 # Create your views here.
 class MainPage(View):
-    def get(self, request):
-        #return render(request, 'news/main.html')
-        # video = get_object_or_404(Video, title='ITLAB')
-        # data = {'video': video}
-        # print(video.title)
-        return render(request, 'news/main.html')
+    async def get(self, request):
+        template = 'news/main.html'
+        user = await request.auser()
+        is_authenticated = user.is_authenticated
+        data = {'is_authenticated': is_authenticated}
+        return render(request, template, data)

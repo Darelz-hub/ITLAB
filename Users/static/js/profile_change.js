@@ -4,7 +4,8 @@ $(document).ready(function(){
         event.preventDefault(); // Отменяем стандартное поведение формы
         // Получаем данные из полей формы
         const data = {
-        email: $("#email").val()
+        email: $("#email").val(),
+        quote: $("#quote").val()
         };
         ProfileChangeFunction(data);
     });

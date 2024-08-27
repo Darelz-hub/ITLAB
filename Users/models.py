@@ -25,10 +25,11 @@ class ApplicationUsers(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name='Пользователь')
-    image = models.ImageField(upload_to='imagedb/', null=True, max_length=255, validators=[
+    image = models.ImageField(upload_to='imagedb/', blank=True, null=True, max_length=255, validators=[
         FileExtensionValidator(['png', 'jpg', 'jpeg', 'gif'])], verbose_name='Изображение')
     quote = models.CharField(blank=True, null=True, max_length=255, verbose_name='Любимая цитата')
-
+    group = models.CharField(verbose_name='Группа', max_length=255, blank=True, null=True)
+    sections = models.ForeignKey(Secions, on_delete=models.CASCADE, verbose_name="секция",blank=True, null=True)
     class Meta:
         verbose_name = 'Профиль пользователя'
         verbose_name_plural = 'Профиль пользователя'

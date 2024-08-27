@@ -9,6 +9,7 @@ from . import views
 
 app_name = 'users'
 urlpatterns = [
+    # path('login/', views.alogin()),
     path('login/', LoginView.as_view(template_name='users/login.html',
                                      authentication_form=LoginFormUser), name='login'), # переход на профиль
     path('logout/', LogoutView.as_view(), name='logout'), # выход

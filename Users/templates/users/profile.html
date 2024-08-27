@@ -10,10 +10,14 @@
 <p>Hello {{user.username}}</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 <script src="{% static 'js/profile_change.js' %}"></script>
+<h1>ФИО: {{user.first_name}} {{user.last_name}}</h1>
 <form id="profile_change">
     {% csrf_token %}
     <input type="text" id="email" name="email" value="{{user.email}}" required>
+    <input type="text" id="quote" name="quote" value="{{profile.quote}}">
+<!---->
     <button type="submit">Изменить</button>
 </form>
+<!--  <input type="text" id="quote" name="quote" value="{{profile.quote}}">-->
 </body>
 </html>
