@@ -10,7 +10,7 @@ from Users.forms import ApplicationForm
 from Users.models import Profile
 from django.http import JsonResponse
 
-from Users.users_function import get_user_profile, change_profile_user
+from Users.users_function import get_user_profile, change_profile_user, get_secions
 
 
 # Create your views here.
@@ -24,7 +24,8 @@ class ProfileUser(View):
      async def get(self, request):
         user = await request.auser()
         profile = await get_user_profile(user)
-        data = {'user': user, 'profile': profile}
+        secions = await get_secions(profile)
+        data = {'user': user, 'profile': profile, 'secions': secions}
         template_name = 'users/profile.html'
         return render(request, template_name, data)
 class ProfileChange(View):

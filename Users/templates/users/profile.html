@@ -10,7 +10,12 @@
 <p>Hello {{user.username}}</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
 <script src="{% static 'js/profile_change.js' %}"></script>
+{% if user.is_staff  %}
+    <a href="/my/admin/">Перейти</a>
+{% endif %}
 <h1>ФИО: {{user.first_name}} {{user.last_name}}</h1>
+<h1>Группа: {{profile.group}} </h1>
+<h1>Секция: {{secions}}</h1>
 <form id="profile_change">
     {% csrf_token %}
     <input type="text" id="email" name="email" value="{{user.email}}" required>

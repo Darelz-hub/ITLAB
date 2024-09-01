@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from SITEITLAB import settings
-
+app_name = 'itlab'
 urlpatterns = [
     path('my/admin/', admin.site.urls),
     path('users/', include('Users.urls')),

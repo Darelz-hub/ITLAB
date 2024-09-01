@@ -7,13 +7,25 @@
 
         <a href="{% url 'users:application' %}"> Подать заявку </a>
     </div>
+    {% for new in news %}
+            {% if forloop.counter < 4 %}
+            <div class="content_news">
+                <a href="#">
+                <h1 class="title">{{new.title}}</h1>
+                <img src="{{new.main_image.url}}"> </img>
+                <p>{{new.brief_description}}</p>
+                <p>{{new.time_created}}</p>
+                </a>
+            </div>
+            {% endif %}
+    {% endfor %}
 <p>HELLO</p>
     <p>HELLO</p><p>HELLO</p><p>HELLO</p><p>HELLO</p><p>HELLO</p><p>HELLO</p>
     <p>HELLO</p>
     <p>HELLO</p><p>HELLO</p>
     <p>HELLO</p>
     <p>HELLO</p>
-    v<p>HELLO</p>
+    <p>HELLO</p>
 <!--        <video>-->
 <!--&lt;!&ndash;             <source src="{{ video.file.url }}">&ndash;&gt;-->
 <!--        </video>-->

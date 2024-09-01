@@ -20,3 +20,16 @@ color: #FFFFFF;
 width: 1550px;
 height: 872px;
 }
+.content_news{
+border: 1px solid black;
+text-align: left;
+margin-right: auto;
+margin-left: auto;
+height: 650px;
+width: 600px;
+margin-top: 5%;
+}
+.content_news img{
+height: 500px;
+width: 500px;
+}
