@@ -13,19 +13,14 @@
                 <a href="#">
                 <h1 class="title">{{new.title}}</h1>
                 <img src="{{new.main_image.url}}"> </img>
-                <p>{{new.brief_description}}</p>
-                <p>{{new.time_created}}</p>
+                <p class="news_date">{{new.time_created|date:"d.m.Y"}}</p>
+                <p class="brief_description" >{{new.brief_description}}...</p>
+
                 </a>
             </div>
             {% endif %}
     {% endfor %}
-<p>HELLO</p>
-    <p>HELLO</p><p>HELLO</p><p>HELLO</p><p>HELLO</p><p>HELLO</p><p>HELLO</p>
-    <p>HELLO</p>
-    <p>HELLO</p><p>HELLO</p>
-    <p>HELLO</p>
-    <p>HELLO</p>
-    <p>HELLO</p>
+
 <!--        <video>-->
 <!--&lt;!&ndash;             <source src="{{ video.file.url }}">&ndash;&gt;-->
 <!--        </video>-->

@@ -21,15 +21,32 @@ width: 1550px;
 height: 872px;
 }
 .content_news{
+border-radius: 5%;
 border: 1px solid black;
 text-align: left;
 margin-right: auto;
 margin-left: auto;
-height: 650px;
+height: auto;
 width: 600px;
 margin-top: 5%;
 }
 .content_news img{
-height: 500px;
-width: 500px;
+height: auto;
+width: 100%;
+}
+.content_news .title {
+padding: 5%;
+text-align: justify;
+font-size: 2em;
+}
+.content_news .brief_description {
+padding-left: 5%;
+padding-right: 5%;
+padding-bottom: 5%;
+font-size: 1.5em;
+}
+.content_news .news_date{
+font-size: 1em;
+padding-left: 5%;
+padding-right: 5%;
 }

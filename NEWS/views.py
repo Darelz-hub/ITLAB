@@ -2,7 +2,7 @@ import requests
 from django.shortcuts import render, get_object_or_404
 from django.views import View
 from NEWS.models import Video, News
-from NEWS.news_function import get_news
+from NEWS.asyns_news_function import get_news
 from asgiref.sync import sync_to_async
 
 # Create your views here.

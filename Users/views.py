@@ -10,7 +10,7 @@ from Users.forms import ApplicationForm
 from Users.models import Profile
 from django.http import JsonResponse
 
-from Users.users_function import get_user_profile, change_profile_user, get_secions
+from Users.asyns_users_function import get_user_profile, change_profile_user, get_secions
 
 
 # Create your views here.
