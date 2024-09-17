@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main>
+    <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
+    {% for new in news %}
+            <div class="content_news">
+                <a href="#">
+                <h1 class="title">{{new.title}}</h1>
+                <img src="{{new.main_image.url}}"> </img>
+                <p class="news_date">{{new.time_created|date:"d.m.Y"}}</p>
+                <p class="brief_description" >{{new.brief_description}}...</p>
+                </a>
+            </div>
+    {% endfor %}
+</main>
+{% endblock %}
