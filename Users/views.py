@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import FormView
 
+from NEWS.asyns_news_function import form_save
 from Users.forms import ApplicationForm
 from Users.models import Profile
 from django.http import JsonResponse
@@ -39,6 +40,11 @@ class Application(FormView): # форма заявки
     template_name = 'users/application.html'
     form_class = ApplicationForm
     success_url = '/'
-    def form_valid(self, form): # метод для сохранения данных в бд
-        form.save()
-        return super().form_valid(form)
+    def form_valid(self, form):
+        # Сохраняем данные в базе данных асинхронно
+        sync_to_async(form.save)()  # Выполняем сохранение, не ожидаем результата
+        return super().form_valid(form)  # Возвращаем объект HttpResponse
+
+    def form_invalid(self, form):
+        # Возвращаем невалидную форму
+        return super().form_invalid(form)  # Возвращаем объект HttpResponse

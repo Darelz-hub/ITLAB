@@ -26,3 +26,7 @@ async def get_all_news():
 @sync_to_async
 def get_news_information(id):
     return News.objects.get(id=id)
+
+@sync_to_async
+def form_save(form):
+    return form.save()
