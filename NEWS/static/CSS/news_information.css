@@ -1,0 +1,48 @@
+/*увеличение фотографии при наведении https://webref.ru/recipe/2302*/
+.scale {
+    display: inline-block; /* Строчно-блочный элемент */
+    overflow: hidden; /* Скрываем всё за контуром */
+}
+   .scale img {
+    transition: 1s; /* Время эффекта */
+    display: block; /* Убираем небольшой отступ снизу */
+   }
+   .scale img:hover {
+    transform: scale(1.25); /* Увеличиваем масштаб */
+   }
+
+ .photo{
+ wight: 400px;
+ height: 400px;
+ }
+ .container{
+text-align: center;
+display: center;
+margin-top: 5%;
+margin-left: 5%;
+margin-right: 5%;
+}
+.title {
+font-size: xxx-large;
+margin-bottom: 5%;
+}
+div.container div.galery {
+margin-left: 5%;
+margin-right: 5%;
+}
+div.description{
+text-indent: 5%; /* Отступ первой строки в пикселах */
+margin-top: 5%;
+margin-bottom: 5%;
+font-size: xx-large;
+text-align: justify;
+}
+/*класс для увеличения фотографии при клике*/
+/*.big-photo{
+position: absolute;
+display: block;
+margin-left: auto;
+margin-right: auto;
+wight: 400px;
+height: 400px;
+}*/

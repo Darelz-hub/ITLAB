@@ -28,6 +28,7 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
-class Galery_News(models.Model):
+
+class Galery_Image_in_News(models.Model):
     image = models.ImageField(upload_to='gallery')
     news = models.ForeignKey(News, on_delete=models.CASCADE, related_name='images')

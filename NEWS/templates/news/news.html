@@ -3,9 +3,9 @@
 {% block content %}
 <main>
     <link rel="stylesheet" href="{% static 'CSS/main.css' %}">
-    {% for new in news %}
+    {% for new in page_obj %}
             <div class="content_news">
-                <a href="#">
+                <a href="{% url 'news:news_information' new.id %}">
                 <h1 class="title">{{new.title}}</h1>
                 <img src="{{new.main_image.url}}"> </img>
                 <p class="news_date">{{new.time_created|date:"d.m.Y"}}</p>
@@ -13,5 +13,19 @@
                 </a>
             </div>
     {% endfor %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">  &laquo; </a>
+                <a href="?page={{ page_obj.previous_page_number }}"> &#8249; </a>
+            {% endif %}
+            <span class="current">
+                Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+            </span>
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}"> &#8250; </a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">  &raquo; </a>
+            {% endif %}
+        </span>
 </main>
 {% endblock %}

@@ -26,8 +26,8 @@ class ApplicationForm(ModelForm):
         widgets = {
                 'group': forms.TextInput(attrs={'placeholder': 'Группа'}),
                 'full_name': forms.TextInput(attrs={'placeholder': 'ФИО'}),
-                'telegram': forms.TextInput(attrs={'placeholder': 'Телеграм'}),
-                'descriptions': forms.Textarea(attrs={'placeholder': 'Информация о вас'})
+                'telegram': forms.TextInput(attrs={'placeholder': 'Ссылка на ваш телеграм'}),
+                'descriptions': forms.Textarea(attrs={'placeholder': 'Почему хотите вступить в IT лабораторию?'})
         }
 
 # class ProfileUser(ModelForm):

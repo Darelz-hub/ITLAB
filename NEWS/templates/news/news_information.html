@@ -1,12 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-hello world
-{{news.title}}
-{{news.description}}
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main>
+<link rel="stylesheet" href="{% static 'CSS/news_information.css' %}">
+<!--    скрипт для увеличения фотографии при нажатии-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>-->
+<!--&lt;!&ndash;<script src="{% static 'js/news_information.js' %}"></script>&ndash;&gt; -->
+
+
+<div class="container">
+    <h1 class="title">{{news.title}}</h1>
+<!--    необходимый контейнер для скрипта-->
+<!--    <span class="big-photo" id="big-photo"></span>-->
+    <div class="galery">
+        {% for image in galery %}
+          <div class="scale"><img onclick="open_photo('{{image.image.url}}')" class="photo" src="{{image.image.url}}"> </img></div>
+        {% endfor %}
+    </div>
+    <div class="description">
+        <p>{{news.description|linebreaks}}</p>
+    </div>
+</div>
+</main>
+{% endblock %}
