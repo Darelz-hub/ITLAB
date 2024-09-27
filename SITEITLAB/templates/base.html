@@ -27,7 +27,7 @@
                     <li><a href="#"> Наши проекты</a></li>
                     <li><a href="#"> Об IT LAB</a>
                         <ul>
-                            <li><a href="#">Сведения об IT LAB</a></li>
+                            <li><a href="{% url 'information:basic_information' %}">Сведения об IT LAB</a></li>
                             <li><a href="#">Руководство</a></li>
                             <li><a href="#">Контакты</a></li>
                             <li><a href="#">#</a></li>
@@ -60,7 +60,8 @@
 {% block content %}
 {% endblock %}
 <footer>
-    <p class="information">IT LAB - это место где каждый студент может узнать и изучить что-то новое. Это бобик сдох <a href="#">Сведения о нас</a></p>
+    <p class="information">IT LAB - это место где каждый студент может узнать и изучить что-то новое. Это бобик сдох
+        <a href="{% url 'information:basic_information' %}">Сведения о нас</a></p>
     <div class="info_block_left">
     <h1 class="contacts">Контакты IT LAB</h1>
         <ul>

@@ -1,0 +1,48 @@
+/*ul {
+list-style-type: none;
+}
+ul.list_information li{
+line-height: 200%;
+display: inline; /* Отображать как строчный элемент */
+/*margin-right: 5px;
+border: 1px solid #372579;
+color: #372579;
+width: 50%;
+height: 200px;
+word-break: break-all;
+}*/
+.title{
+margin-top: 5%;
+margin-bottom: 5%;
+margin-left: 5%;
+font-size: xxx-large;
+}
+.container_basic_information{
+margin-left: 5%;
+}
+.basic_information{
+padding-top: 1%;
+padding-left: 1%;
+margin-left: 2%;
+margin-bottom: 5%;
+font-size: 1.2em;
+display: inline-grid;
+border:  1px solid #372579;
+width: 250px;
+height: 175px;
+color: #372579;
+border-radius: 10%;
+}
+.basic_information:hover{
+background-color: #372579;
+color: #FFFFFF;
+}
+.transition_arrow{
+margin-top: 0;
+margin-left: auto;
+margin-right: 5%;
+padding-bottom: 5%;
+align-self: flex-end;
+width: 50px;
+height: 50px;
+}
