@@ -14,7 +14,7 @@
                     {% csrf_token %}
             <div class="form_application">
             {{form.as_p}}
-                <button type="submit">Отправить</button>
+                <button id="#buttonsubmit" type="submit">Отправить</button>
 
                <br> <a href="{% url 'news:main' %}">Вернуться назад</a>
             </div>

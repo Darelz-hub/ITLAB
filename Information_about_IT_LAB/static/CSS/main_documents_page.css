@@ -1,0 +1,29 @@
+.title_documents{
+font-size: 2.5em;
+color: #372579;
+margin-left: 5%;
+}
+.container{
+  display: inline-flex;
+  width: 500px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+ }
+.container p {
+ color: #372579;
+ font-size: 1.4em;
+ margin-left: 5%;
+ word-break: normal;
+ width: 450px;
+}
+/*
+.container svg{
+ width: auto;
+ height: auto;
+}
+*/
