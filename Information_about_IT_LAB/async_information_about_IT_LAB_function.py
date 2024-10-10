@@ -14,8 +14,6 @@ async def get_documents(category):
         documents_list.append(document)
     return documents_list
 
-async def get_role():
-    
 async def get_managers():
     managers = Management.objects.all()
     managers_list = []

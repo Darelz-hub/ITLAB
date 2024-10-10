@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.views import View
 import requests
 
-from Information_about_IT_LAB.async_information_about_IT_LAB_function import get_documents, get_category_id, \
-    get_managers
+from Information_about_IT_LAB.async_information_about_IT_LAB_function import (get_documents, get_category_id,
+                                                                              get_managers)
 from NEWS.asyns_news_function import get_user_is_authenticated
 
 
@@ -30,6 +30,5 @@ class ManagementPage(View):
         template_name = 'information/management.html'
         is_authenticated = await get_user_is_authenticated(request)
         managers = await get_managers()
-        role = await get_role()
         data = {'managers': managers, 'is_authenticated': is_authenticated}
         return render(request, template_name, data)

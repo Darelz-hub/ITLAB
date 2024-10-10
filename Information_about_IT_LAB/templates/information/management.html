@@ -2,7 +2,26 @@
 {% load static %}
 {% block content %}
 <main>
-<!--    <link rel="stylesheet" type="text/css" href="{% static 'CSS/main_documents_page.css' %}">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/managers_page.css' %}">
+        {% for manager in managers %}
+        <div class="managers">
+            <h1>{{manager.role}}</h1>
+                {% if manager.image %}
+                    <img class="photo" src="{{manager.image.url}}">
+                {% endif %}
+                    <p>{{manager.fullName}}</p>
+                {% if manager.job_title %}
+                    <p>{{manager.job_title}}</p>
+                {% endif %}
+                {% if manager.phone %}
+                    <p>{{manager.phone}}</p>
+                {% endif %}
+                    <p>{{manager.email}}</p>
+                {% if manager.description %}
+                <p>{{manager.description}}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
 
 </main>
 {% endblock %}
