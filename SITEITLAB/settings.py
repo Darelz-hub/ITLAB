@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'Users',
     'NEWS',
     'Information_about_IT_LAB',
+    'phone_field',
 ]
 
 MIDDLEWARE = [
