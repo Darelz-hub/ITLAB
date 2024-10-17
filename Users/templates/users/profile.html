@@ -1,11 +1,7 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% block content %}
+<main>
 {% csrf_token %}
 <p>Hello {{user.username}}</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
@@ -16,13 +12,14 @@
 <h1>ФИО: {{user.first_name}} {{user.last_name}}</h1>
 <h1>Группа: {{profile.group}} </h1>
 <h1>Секция: {{secions}}</h1>
+    <h1>Email: {{user.email}}</h1>
+    <h1>Цитата: {{profile.quote}}</h1>
 <form id="profile_change">
     {% csrf_token %}
     <input type="email" id="email" name="email" value="{{user.email}}" pattern=".+@.+\.[a-z]{2,4}$" required>
     <input type="text" id="quote" name="quote" value="{{profile.quote}}">
-<!---->
     <button type="submit">Изменить</button>
 </form>
 <!--  <input type="text" id="quote" name="quote" value="{{profile.quote}}">-->
-</body>
-</html>
+</main>
+{% endblock %}

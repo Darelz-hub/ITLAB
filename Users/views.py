@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import FormView
 
-from NEWS.asyns_news_function import form_save
+from NEWS.asyns_news_function import form_save, get_user_is_authenticated
 from Users.forms import ApplicationForm
 from Users.models import Profile
 from django.http import JsonResponse
@@ -26,7 +26,8 @@ class ProfileUser(View):
         user = await request.auser()
         profile = await get_user_profile(user)
         secions = await get_secions(profile)
-        data = {'user': user, 'profile': profile, 'secions': secions}
+        is_authenticated = await get_user_is_authenticated(request)
+        data = {'user': user, 'profile': profile, 'secions': secions, 'is_authenticated': is_authenticated}
         template_name = 'users/profile.html'
         return render(request, template_name, data)
 class ProfileChange(View):
