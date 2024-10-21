@@ -22,7 +22,7 @@ class Management(models.Model):
                               validators=[FileExtensionValidator(['png', 'jpg', 'jpeg', 'gif'])],
                               verbose_name='Фотография')
     fullName = models.CharField(max_length=255, verbose_name='ФИО')
-    job_title = models.CharField(max_length=255, verbose_name='Должность в вузе (для преподавателей и руководства вуза)'
+    job_title = models.CharField(max_length=255, verbose_name='Занимаемая должность(директор ВВФ МТУСИ, Глава WEB, зам. WEB, Глава инженеров, Зам. Инженеров и тд  )'
                                  , blank=True, null=True)
     role = models.CharField(blank=True, null=True, max_length=255, verbose_name='роль в It lab')
     phone = PhoneField(blank=True, null=True, help_text='Ваш номер телефона', verbose_name='Телефон')

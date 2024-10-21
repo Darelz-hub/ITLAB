@@ -1,14 +1,27 @@
 .managers .photo{
 float:left;
-border-radius: 50%;
-aspect-ratio: 1/1;
+border-radius: 20%;
     max-width: 100%;
-    height: 243px;
+    height: 250px;
+    width: 200px;
 }
 .managers{
 padding-top: 5%;
 padding-bottom: 5%;
+margin-left: 5%;
+}
+.managers .manager_text{
+margin-top: 5%;
+padding-left: 16%;
+font-size: 1.6em;
+}
+.manager_title{
 margin-top: 5%;
 margin-left: 5%;
-margin-bottom: 5%;
+}
+.manager_svg{
+width: 30px;
+height: 30px;
+align-items: center;
+float: left;
 }

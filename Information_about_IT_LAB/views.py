@@ -32,3 +32,10 @@ class ManagementPage(View):
         managers = await get_managers()
         data = {'managers': managers, 'is_authenticated': is_authenticated}
         return render(request, template_name, data)
+
+class GeneralInformation(View):
+    async def get(self, request):
+        template_name = 'information/general_information.html'
+        is_authenticated = await get_user_is_authenticated(request)
+        data = { 'is_authenticated': is_authenticated}
+        return render(request, template_name, data)
